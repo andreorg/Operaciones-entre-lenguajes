@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <div class="container" >
+        <h1 style="text-align: center;">Actividad 3</h1>
+        
+    <div class="panelAlfabetos">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" >
+                <h2 style="text-align: center;">Operaciones con Alfabetos</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8" style=>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-5"><label>Alfabeto1:{ <input type="text" id="alfabeto1">}</label></div>
+                    <div class="col-5"> <label>Alfabeto2:{ <input type="text" id="alfabeto2">}</label></div>
+                </div>
+                
+            </div>
+        </div>
+
+        
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-1"> </div>
+                    <div class="col-10"><textarea name="" id="alfabetoR" cols="80" rows="2"></textarea></div>
+                </div>
+            </textarea></div>
+        </div>
+        
+        <div class="row" >
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-5" >
+                         <button onclick="alfabetoUnion()">Union</button>
+                         <button onclick="alfabetoDiferencia()">Diferencia</button>
+                         <button onclick="alfabetoInterseccion()">Interseccion</button>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="panelLenguajes">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <h2 style="text-align: center;">Operaciones con Lenguajes</h2>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-1"></div>
+            <div class="col-10" style=>
+                <div class="row">
+                   <div class="col-1"></div>
+                    <div class="col-4"><label>Lenguaje1:{ <input type="text" id="lenguaje1">}</label></div>
+                    <div class="col-4"><label>Lenguaje2:{ <input type="text" id="lenguaje2">}</label></div>
+                    <div class="col-2"><label>Potencia: <input type="text" id="potencia" style="max-width:30px;"></label></div>
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10"> <textarea name="" id="lenguajeR" cols="80" rows="2" ></textarea></div>
+                </div>
+            </textarea>
+            </div>
+        </div>
+        
+
+        <div class="row" >
+            <div class="col-2"></div>
+            <div class="col-8">
+                 <div class="row">
+                <div class="col-1"></div>
+                 <div class="col-9">
+                        <button onclick="lenguajeUnion()">Union</button>
+                        <button onclick="lenguajeDiferencia()">Diferencia</button>
+                        <button onclick="lenguajeInterseccion()">Interseccion</button>
+                        <button onclick="lenguajeConcatenacion(document.getElementById('lenguaje1').value.split(','),document.getElementById('lenguaje2').value.split(','))">Concatenacion</button>
+                        <button onclick="lenguajeCardinalidad(document.getElementById('lenguaje1').value.split(','))">Cardinalidad L1</button>
+                        <button onclick="lenguajeCardinalidad(document.getElementById('lenguaje2').value.split(','))">Cardinalidad L2</button>
+                        <button onclick="lenguajeInvertido(document.getElementById('lenguaje1').value.split(','))">Inverso L1</button>
+                        <button onclick="lenguajeInvertido(document.getElementById('lenguaje2').value.split(','))">Inverso L2</button>
+                        <button onclick="lenguajePotencia(document.getElementById('lenguaje1').value.split(','))">Potencia L1</button>
+                        <button onclick="lenguajeInvertido(document.getElementById('lenguaje2').value.split(','))">Potencia L2</button>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <div class="panelPalabras">
+        <h2 style="text-align: center;">Operaciones con palabras</h2>
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-4"></div>
+                    <div class="col-8"><label>Palabra:{ <input type="text" id="palabra1">}</label></div>
+                </div>
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-10"><textarea name="" id="palabraR" cols="80" rows="2" ></textarea></div>
+                </div>
+            </textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-5"></div>
+            <div class="col-7">
+                <button onclick="palabraInversa(document.getElementById('palabra1').value)">Inversa</button>
+                <button onclick="palabraCardinalidad()">Cardinalidad</button>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    <script src="/scripts.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+</body>
+</html>
